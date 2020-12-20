@@ -14,14 +14,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 const routes = require('./api/routes/studentsListRoutes.js')(app,fs);
 
-const server = app.listen(3001,() =>{
-	console.log('listening on port :',server.address().port);
-});
+// const server = app.listen(3001,() =>{
+// 	console.log('listening on port :',server.address().port);
+// });
 
 // var express = require('express'),
 //   app = express(),
-//   port = process.env.PORT || 3000;
+   port = process.env.PORT || 3000;
 
-// app.listen(port);
+app.listen(port);
 
-// console.log('students list RESTful API server started on: ' + port);
+console.log('students list RESTful API server started on: ' + port);
